@@ -1,11 +1,12 @@
 import React from 'react'
+import Nav from './components/Nav'
 
 const App = () => {
   return (
-    <div className='bg-red-200'>
-      app
-      
-    </div>
+    <>
+    <Nav/>
+    
+    </>
   )
 }
 
