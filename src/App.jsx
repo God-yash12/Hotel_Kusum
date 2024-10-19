@@ -4,6 +4,8 @@ import Nav from './components/Nav'
 import About from './components/about/About';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import Facilities from './components/Facilities/Facilities';
+import Rooms from './components/rooms/Rooms';
 
 const App = () => {
   useEffect(()=> {
@@ -16,6 +18,8 @@ const App = () => {
     <>
     <Nav/>
     <About />
+    <Rooms />
+    <Facilities />
     </>
   )
 }
