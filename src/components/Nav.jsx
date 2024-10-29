@@ -1,11 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo/logo.png'; 
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import logo from '../assets/logo/logo.png';
+
 
 const Nav = () => {
+  useGSAP(()=>{
+    gsap.from(".logo",{
+      duration:9,
+      delay:1,
+      rotate:360,
+      repeat:-1,
+      yoyo:true
+
+  })
+
+    })
+  
   return (
     <nav className='px-8 w-full h-28   flex items-center justify-between'>
-      <div className="logo w-24 h-24  rounded-full p-1  mix-blend-screen">
+      <div className="logo w-24 h-24  rounded-full p-2  mix-blend-screen">
         <NavLink to='/' className={({isActive})=> isActive ? 'active' : ''}>
         <img src={logo} alt="Logo" className='w-full h-full object-contain cursor-default' />
         </NavLink>
