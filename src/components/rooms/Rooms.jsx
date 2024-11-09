@@ -54,7 +54,7 @@ const Rooms = () => {
       width: "full",
       opacity: 1,
     }}
-     className="mt-20 lg:mt-44 py-6 lg:py-16">
+     className="mt-20 lg:mt-44 py-6 lg:py-16 lg:px-24">
       <div className=" lg:mx-24">
         <div data-aos = "fade-up" className="flex flex-col items-center justify-center">
           <h3 className="text-orange-600 text-lg lg:text-2xl tracking-wider uppercase text-center mb-2">Accomodation</h3> 

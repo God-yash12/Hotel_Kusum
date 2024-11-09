@@ -31,14 +31,14 @@ const Facilities = () => {
   ];
 
   return (
-    <div className="bg-[#F8F6F3] h-full mt-20">
+    <div className="bg-[#F8F6F3] h-full pt-10">
       <div className="container py-20">
         <div>
           {/* heading */}
           
           <div 
           data-aos = "fade-down"
-          className="flex flex-col items-center justify-between lg:ml-80">
+          className="flex flex-col items-center justify-between mb-6 lg:ml-80">
             <h3 className="text-orange-600 text-sm lg:text-2xl tracking-wider uppercase text-center mb-3">
               Our Services
             </h3>
