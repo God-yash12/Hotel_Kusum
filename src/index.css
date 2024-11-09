@@ -1,24 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    font-family: 'Gilroy';
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('./assets/fonts/Gilroy-Regular.woff2') format('woff2'),
-         url('./assets/fonts/Gilroy-Regular.woff') format('woff'),
-         url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Gilroy';
-    src: url('./assets/fonts/Gilroy-Bold.woff2') format('woff2'),
-         url('./assets/fonts/Gilroy-Bold.woff') format('woff'),
-         url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
+li{
+    font-size: 18px;
     font-weight: bold;
-    font-style: normal;
+    color: rgb(142, 140, 140);
+}
+li {
+    position: relative;
+    /* list-style: none; */
+    /* padding: 10px; */
   }
   
- 
+  li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(186, 136, 10);
+    left: 0;
+    bottom: -5px;
+    transition:  0.1s ease-in-out;
+  }
   
+  li:hover::after {
+    width: 100%;
+  }
+  
+nav{
+    background-color:rgb(19, 15, 2);
+}
+.active{
+  color: rgb(191, 172, 25);
+}
+.logo{
+  background-color: rgb(13, 9, 1);
+  /* border: 2px solid rgb(136, 110, 44); */
+}
+.checkAvailibility {
+  background-color: rgba(7, 5, 1, 0.87);
+}

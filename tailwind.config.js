@@ -22,6 +22,9 @@ export default {
       animation: {
         "line-left-right": "lineMove 10s linear infinite",
       },
+      colors:{
+        RGBONE:'rgb(186, 136, 10)',
+      }
     },
   },
   plugins: [],
