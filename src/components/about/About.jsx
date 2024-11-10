@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image1 from "../../assets/about/about-img1.jpg";
 import Image2 from "../../assets/about/about-img2.jpg";
+import Properties from "../property/Properties";
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,6 +21,7 @@ const About = () => {
   };
 
   return (
+    <>
     <div className="container flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20 px-4 lg:ml-36">
       {/* Slider Container */}
       <div
@@ -99,7 +101,12 @@ const About = () => {
           </button>
         </div>
       </div>
+     
     </div>
+
+<Properties />
+
+    </>
   );
 };
 

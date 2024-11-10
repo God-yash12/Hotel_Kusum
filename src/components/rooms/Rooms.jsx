@@ -6,6 +6,7 @@ import Room3Img from "../../assets/Rooms/Room3.jpg";
 import bgImage from "../../assets/Rooms/bg-img.jpg";
 import { MdFamilyRestroom } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
+import Facilities from "../Facilities/Facilities";
 
 const Rooms = () => {
   const data = [
@@ -142,6 +143,9 @@ const Rooms = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div>
+      <Facilities />
       </div>
     </div>
   );

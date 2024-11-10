@@ -29,12 +29,12 @@ const Footer = () => {
               Quick Links
             </h1>
             <ul className="text-white text-base lg:text-xl space-y-2 text-center">
-              <li className="hover:text-orange-300 hover:underline cursor-pointer">Home</li>
-              <li className="hover:text-orange-300 hover:underline cursor-pointer">About</li>
-              <li className="hover:text-orange-300 hover:underline cursor-pointer">Events</li>
-              <li className="hover:text-orange-300 hover:underline cursor-pointer">Gallery</li>
-              <li className="hover:text-orange-300 hover:underline cursor-pointer">Contact Us</li>
-              <li  className="hover:text-orange-300 hover:underline cursor-pointer">Location</li>
+              <li className="hover:text-orange-300 cursor-pointer">Home</li>
+              <li className="hover:text-orange-300 cursor-pointer">About</li>
+              <li className="hover:text-orange-300 cursor-pointer">Events</li>
+              <li className="hover:text-orange-300 cursor-pointer">Gallery</li>
+              <li className="hover:text-orange-300 cursor-pointer">Contact Us</li>
+              <li  className="hover:text-orange-300 cursor-pointer">Location</li>
             </ul>
           </div>
           {/* Contact Info */}
