@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setActiveItem(id);
-      setIsOpen(false); // Close the mobile menu if open
+      setIsOpen(false); 
     }
   };
 
@@ -36,12 +37,12 @@ const Navbar = () => {
 
       // Show navbar when scrolling up, hide when scrolling down
       if (prevScrollPos.current > currentScrollPos) {
-        setTop(0); // Show navbar
+        setTop(0);
       } else {
-        setTop(-180); // Adjust based on your navbar height to hide it
+        setTop(-180); 
       }
 
-      prevScrollPos.current = currentScrollPos; // Update previous scroll position
+      prevScrollPos.current = currentScrollPos; 
     };
 
     // Attach the scroll event listener
@@ -51,7 +52,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array means it only runs once, on mount
+  }, []); 
 
   return (
     <nav
@@ -83,8 +84,9 @@ const Navbar = () => {
           {/* Nav Links for larger screens */}
           <div className="hidden lg:flex font-poppins space-x-9">
             {["home", "rooms", "gallery", "events", "about"].map((item) => (
-              <button
+              <Link
                 key={item}
+                to={`/${item}`}
                 onClick={() => scrollToSection(item)}
                 className={`relative text-gray-600 hover:text-orange-500 ${
                   activeItem === item ? "text-orange-500" : ""
@@ -96,7 +98,7 @@ const Navbar = () => {
                     activeItem === item ? "scale-x-100" : "scale-x-0"
                   }`}
                 />
-              </button>
+              </Link>
             ))}
 
             {/* Booking Button */}
