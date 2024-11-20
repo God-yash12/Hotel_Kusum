@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { getEventByCategory } from "../../../../hotel-backend/api/eventAPIs";
+import { getEventByCategory } from "../../../hotel-backend/api/eventAPIs";
 
-const Events = () => {
+const EventsByCategory = () => {
     const [pastEvents, setPastEvents] = useState([]);
     const [upcomingEvents, setUpcomingEvents] = useState([]);
-    const [selectedEvent, setSelectedEvent] = useState(null); 
+    const [selectedEvent, setSelectedEvent] = useState(null); // State to hold the selected event
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const Events = () => {
             <div className="w-full h-64">
                 {event.images?.length > 0 ? (
                     <img
-                        src={`http://localhost:5000${event.images[0]}`} 
+                        src={`http://localhost:5000${event.images[0]}`} // Display the first image
                         alt={event.title}
                         className="w-full h-full object-cover"
                     />
@@ -115,4 +115,4 @@ const Events = () => {
     );
 };
 
-export default Events;
+export default EventsByCategory;
